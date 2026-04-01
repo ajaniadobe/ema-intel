@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/homepage.html",
+  "path": "homepage",
+  "timestamp": "2026-04-01T18:39:19.586Z",
+  "title": "Intel Inside - Built for AI",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "cards-news",
+    "cards-quicklinks"
+  ]
+}

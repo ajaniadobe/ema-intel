@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-04-01T18:19:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.intel.com/content/www/us/en/homepage.html",
+    "originPage": "Intel homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "product-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + eyebrow + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "slidesCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero carousels",
+      "product showcase rotations",
+      "campaign landing page heroes"
+    ],
+    "notSuitableFor": [
+      "image-only galleries",
+      "testimonial carousels",
+      "small inline carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/homepage"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-01T18:19:00.000Z"
+  }
+}

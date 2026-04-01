@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-quicklinks",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-01T18:19:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.intel.com/content/www/us/en/homepage.html",
+    "originPage": "Intel homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "utility-links",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + label-link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "quick-access utility link grids",
+      "icon+label navigation tiles",
+      "resource shortcut cards"
+    ],
+    "notSuitableFor": [
+      "content-rich cards with descriptions",
+      "product cards with large images",
+      "news article teasers"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/homepage"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-01T18:19:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-01T18:19:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.intel.com/content/www/us/en/homepage.html",
+    "originPage": "Intel homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "news-teasers",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "pretitle + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news article teasers",
+      "press release listings",
+      "blog post previews without images"
+    ],
+    "notSuitableFor": [
+      "product cards with images",
+      "feature cards with icons",
+      "team member cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/homepage"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-01T18:19:00.000Z"
+  }
+}

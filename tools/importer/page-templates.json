@@ -1,0 +1,95 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.intel.com/content/www/us/en/homepage.html"
+      ],
+      "description": "Homepage with dark immersive hero carousel, minimal content sections, brand statement with quick-link cards, and unique compact navigation variant",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            "div.animatedhero.carousel"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            "div.newsarticle"
+          ]
+        },
+        {
+          "name": "cards-quicklinks",
+          "instances": [
+            "div.cmp-tiles-info__items"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": "div.dark-theme",
+          "style": "dark",
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "News Section",
+          "selector": "div.ui-container--with-spacing",
+          "style": null,
+          "blocks": [
+            "cards-news"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--news",
+            "div.separator"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Brand Statement and Quick Links",
+          "selector": "div.tiles",
+          "style": null,
+          "blocks": [
+            "cards-quicklinks"
+          ],
+          "defaultContent": [
+            "div.tiles div.cmp-title"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "marketing-landing",
+      "urls": [
+        "https://www.intel.com/content/www/us/en/gaming/serious-gaming.html",
+        "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html"
+      ],
+      "description": "Long-form marketing landing page with sticky in-page anchor navigation, alternating text/image content sections, expandable card grids, resource link cards, and CTAs",
+      "blocks": []
+    },
+    {
+      "name": "category-directory",
+      "urls": [
+        "https://www.intel.com/content/www/us/en/products/overview.html",
+        "https://www.intel.com/content/www/us/en/developer/overview.html"
+      ],
+      "description": "Category directory page with heading, inline search, multi-column category link grids, icon card grids, and resource card sections",
+      "blocks": []
+    },
+    {
+      "name": "institutional-landing",
+      "urls": [
+        "https://www.intel.com/content/www/us/en/support.html",
+        "https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility.html"
+      ],
+      "description": "Institutional landing page with breadcrumbs, text-heavy sections, tabbed content, expandable card groups with show-more toggles, and document/report cards",
+      "blocks": []
+    }
+  ]
+}

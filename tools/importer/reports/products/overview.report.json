@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/products/overview.html",
+  "path": "products/overview",
+  "timestamp": "2026-04-01T20:26:11.962Z",
+  "title": "Intel® Core™ Processors, FPGAs, GPUs, Networking, Software",
+  "template": "category-directory",
+  "blocks": [
+    "hero"
+  ]
+}

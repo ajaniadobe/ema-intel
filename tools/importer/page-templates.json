@@ -71,7 +71,70 @@
         "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html"
       ],
       "description": "Long-form marketing landing page with sticky in-page anchor navigation, alternating text/image content sections, expandable card grids, resource link cards, and CTAs",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["section.ihp-hero-full-bleed"]
+        },
+        {
+          "name": "cards-product",
+          "instances": ["div.twoColumn.section:has(.fifty-fifty)", "div.promotions.section"]
+        },
+        {
+          "name": "columns",
+          "instances": ["div.twoColumn.section:has(.two-column)"]
+        },
+        {
+          "name": "retailer-locator",
+          "instances": ["div.linklist.section"]
+        },
+        {
+          "name": "cards-resource",
+          "instances": ["div.simpleCard.section"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "section.ihp-hero-full-bleed",
+          "style": "dark",
+          "blocks": ["hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Overview Content",
+          "selector": "div#introtext_copy",
+          "style": "dark",
+          "blocks": ["cards-product"],
+          "defaultContent": ["div#introtext_copy .intro-text-component", "div#introtext .intro-text-component"]
+        },
+        {
+          "id": "section-3",
+          "name": "Platform Advantages",
+          "selector": "div.introtext.section:nth-of-type(3)",
+          "style": "dark",
+          "blocks": ["columns"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Shop and Resources",
+          "selector": "div.linklist.section",
+          "style": "dark",
+          "blocks": ["retailer-locator", "cards-resource"],
+          "defaultContent": ["div.oneColumn.section", "div.reference.section"]
+        },
+        {
+          "id": "section-5",
+          "name": "Footnotes",
+          "selector": "div.disclaimer",
+          "style": null,
+          "blocks": [],
+          "defaultContent": ["div.disclaimer"]
+        }
+      ]
     },
     {
       "name": "category-directory",
@@ -80,7 +143,38 @@
         "https://www.intel.com/content/www/us/en/developer/overview.html"
       ],
       "description": "Category directory page with heading, inline search, multi-column category link grids, icon card grids, and resource card sections",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["div.marquee-search"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Search",
+          "selector": "div.marquee-search",
+          "style": "dark",
+          "blocks": ["hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Product Categories",
+          "selector": "div.linklist.section",
+          "style": null,
+          "blocks": [],
+          "defaultContent": ["div.blade-list"]
+        },
+        {
+          "id": "section-3",
+          "name": "CTA Banner",
+          "selector": "div.oneColumn.section",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": ["div.one-column"]
+        }
+      ]
     },
     {
       "name": "institutional-landing",
@@ -89,7 +183,42 @@
         "https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility.html"
       ],
       "description": "Institutional landing page with breadcrumbs, text-heavy sections, tabbed content, expandable card groups with show-more toggles, and document/report cards",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["div.marquee-search", "section.ihp-hero-full-bleed"]
+        },
+        {
+          "name": "cards-news",
+          "instances": ["div.promotions.section"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ["div.marquee-search", "section.ihp-hero-full-bleed"],
+          "style": "dark",
+          "blocks": ["hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Main Content",
+          "selector": "div.bladepar",
+          "style": null,
+          "blocks": ["cards-news"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Contact CTA",
+          "selector": "div.oneColumn.section",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": ["div.one-column"]
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,16 @@
+.retailer-locator {
+  background-color: #000;
+  color: #fff;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.retailer-locator h2,
+.retailer-locator h3 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.retailer-locator p {
+  color: #ccc;
+}

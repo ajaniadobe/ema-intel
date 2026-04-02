@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-resource",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-01T19:33:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.intel.com/content/www/us/en/gaming/serious-gaming.html",
+    "originPage": "Intel Gaming landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "resource-links",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title-link only",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": ["resource link grids", "how-to article link lists", "simple navigation card grids"],
+    "notSuitableFor": ["product cards with images", "news teasers with descriptions", "icon cards"]
+  },
+  "usage": {
+    "pagesUsing": ["content/gaming/serious-gaming"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-01T19:33:00.000Z"
+  }
+}

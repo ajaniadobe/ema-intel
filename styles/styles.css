@@ -154,29 +154,37 @@
   --color-yellow-800: #373100;
   --color-yellow-900: #1e1b00;
 
-  /* named colors */
+  /* Intel named colors */
   --color-light-base: 255 255 255;
-  --color-dark-base: 0 0 0;
+  --color-dark-base: 0 15 40;
   --color-light: rgb(255 255 255);
-  --color-dark: rgb(0 0 0);
+  --color-dark: rgb(0 15 40);
   --color-text: light-dark(var(--color-dark), var(--color-light));
-  --color-link: light-dark(var(--color-gray-900), var(--color-gray-100));
-  --color-brand: var(--color-purple-500);
-  --color-accent: light-dark(var(--color-magenta-600), var(--color-magenta-500));
+  --color-link: light-dark(#0046c8, #5898ff);
+  --color-brand: #0046c8;
+  --color-accent: light-dark(#0046c8, #5898ff);
   --color-background: light-dark(var(--color-light), var(--color-dark));
-  --color-shaded: light-dark(#f9f9f9, #111);
+  --color-shaded: light-dark(#eef4fe, #0a1628);
+
+  /* Intel-specific colors */
+  --color-intel-blue: #0046c8;
+  --color-intel-dark-navy: #000f28;
+  --color-intel-light-blue-tint: #eef4fe;
+  --color-intel-cobalt-1: #001a43;
+  --color-intel-cobalt-2: #001530;
+  --color-intel-cobalt-3: #000e20;
 
   /* fonts */
   --font-family: montserrat, "Trebuchet MS", sans-serif;
 
-  /* headings */
-  --heading-font-size-xxl: 32.44px;
-  --heading-font-size-xl: 28.83px;
-  --heading-font-size-l: 25.63px;
-  --heading-font-size-m: 22.78px;
-  --heading-font-size-s: 20.25px;
+  /* headings — Intel scale */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 30px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
-  --heading-line-height: 1.15;
+  --heading-line-height: 1.2;
 
   /* body */
   --body-font-size-xxxl: 25px;
@@ -243,10 +251,13 @@ a {
     display: inline-block;
     line-height: 1;
     font-weight: 500;
+    font-size: 14px;
     text-decoration: none;
     border: 2px solid;
-    padding: 8px 12px;
+    border-radius: 100px;
+    padding: 12px 20px;
     box-sizing: border-box;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 
     &.btn-outline {
       background: transparent;
@@ -255,28 +266,53 @@ a {
 
   &.btn-accent {
     color: #fff;
-    background: var(--color-accent);
-    border: 2px solid var(--color-accent);
+    background: var(--color-intel-blue);
+    border: 2px solid var(--color-intel-blue);
+
+    &:hover {
+      background: #003aa5;
+      border-color: #003aa5;
+    }
 
     &.btn-outline {
-      color: var(--color-accent);
+      color: var(--color-intel-blue);
+
+      &:hover {
+        background: var(--color-intel-blue);
+        color: #fff;
+      }
     }
   }
 
   &.btn-primary {
-    color: var(--color-background);
-    background-color: var(--color-text);
+    color: #fff;
+    background-color: var(--color-intel-blue);
+    border: 2px solid var(--color-intel-blue);
+
+    &:hover {
+      background: #003aa5;
+      border-color: #003aa5;
+    }
 
     &.btn-outline {
-      color: var(--color-text);
+      color: var(--color-intel-blue);
       background: transparent;
+
+      &:hover {
+        background: var(--color-intel-blue);
+        color: #fff;
+      }
     }
   }
 
   &.btn-secondary {
-    color: var(--color-background);
-    background-color: var(--color-gray-500);
-    border: 2px solid var(--color-gray-500);
+    color: var(--color-text);
+    background-color: transparent;
+    border: 2px solid var(--color-gray-400);
+
+    &:hover {
+      border-color: var(--color-text);
+    }
 
     &.btn-outline {
       color: var(--color-gray-500);
@@ -287,6 +323,11 @@ a {
     color: #fff;
     background-color: var(--color-red-600);
     border: 2px solid var(--color-red-600);
+
+    &:hover {
+      background-color: var(--color-red-700);
+      border-color: var(--color-red-700);
+    }
 
     &.btn-outline {
       color: var(--color-red-600);
@@ -331,7 +372,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 500;
   line-height: var(--heading-line-height);
 }
 
@@ -361,6 +402,29 @@ img {
 svg {
   width: 20px;
   height: 20px;
+}
+
+/* Intel section variants */
+.section.dark {
+  background-color: var(--color-intel-dark-navy);
+  color: var(--color-light);
+
+  a:not(.btn) {
+    color: #5898ff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-light);
+  }
+}
+
+.section.shaded {
+  background-color: var(--color-intel-light-blue-tint);
 }
 
 /* @media (width >= 600px) {} */

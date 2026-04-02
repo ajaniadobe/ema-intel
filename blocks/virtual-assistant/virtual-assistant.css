@@ -1,0 +1,16 @@
+.virtual-assistant {
+  background-color: #000;
+  color: #fff;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.virtual-assistant h2,
+.virtual-assistant h3 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.virtual-assistant p {
+  color: #ccc;
+}

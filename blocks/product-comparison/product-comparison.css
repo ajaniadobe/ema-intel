@@ -1,0 +1,16 @@
+.product-comparison {
+  background-color: #000;
+  color: #fff;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.product-comparison h2,
+.product-comparison h3 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.product-comparison p {
+  color: #ccc;
+}

@@ -1,0 +1,31 @@
+{
+  "variantName": "retailer-locator",
+  "baseBlock": "stub",
+  "version": "1.0.0",
+  "created": "2026-04-01T19:33:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.intel.com/content/www/us/en/gaming/serious-gaming.html",
+    "originPage": "Intel Gaming landing page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "stub-placeholder",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + placeholder text",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": ["placeholder for excluded retailer/shop dropdown functionality"],
+    "notSuitableFor": ["actual retail integrations"]
+  },
+  "usage": {
+    "pagesUsing": ["content/gaming/serious-gaming"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-01T19:33:00.000Z"
+  }
+}

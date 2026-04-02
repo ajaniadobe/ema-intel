@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-01T19:33:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.intel.com/content/www/us/en/gaming/serious-gaming.html",
+    "originPage": "Intel Gaming landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "product-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading-link + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["product category cards", "feature showcase cards with images", "marketing product tiles"],
+    "notSuitableFor": ["text-only cards", "icon+label cards", "news teasers"]
+  },
+  "usage": {
+    "pagesUsing": ["content/gaming/serious-gaming"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-01T19:33:00.000Z"
+  }
+}

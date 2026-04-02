@@ -1,0 +1,16 @@
+.social-feed {
+  background-color: #000;
+  color: #fff;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.social-feed h2,
+.social-feed h3 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.social-feed p {
+  color: #ccc;
+}

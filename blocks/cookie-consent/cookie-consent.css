@@ -1,0 +1,16 @@
+.cookie-consent {
+  background-color: #000;
+  color: #fff;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.cookie-consent h2,
+.cookie-consent h3 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.cookie-consent p {
+  color: #ccc;
+}

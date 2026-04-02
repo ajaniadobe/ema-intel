@@ -427,6 +427,24 @@ svg {
   background-color: var(--color-intel-light-blue-tint);
 }
 
+/* Mobile-first responsive heading scale */
+@media (width < 600px) {
+  :root {
+    --heading-font-size-xxl: 28px;
+    --heading-font-size-xl: 24px;
+    --heading-font-size-l: 20px;
+    --heading-font-size-m: 18px;
+  }
+
+  .section {
+    padding: 24px 0;
+  }
+
+  .section > .default-content {
+    max-width: 90%;
+  }
+}
+
 /* @media (width >= 600px) {} */
 
 /* @media (width >= 900px) {} */

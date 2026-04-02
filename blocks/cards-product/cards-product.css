@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
@@ -63,4 +63,10 @@
 
 .cards-product .cards-product-card-body a:not(h3 a):hover {
   text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
@@ -48,4 +48,16 @@
 
 .cards-news .cards-news-card-body a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .cards-news > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards-news > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

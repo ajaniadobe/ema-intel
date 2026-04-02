@@ -1,0 +1,96 @@
+{
+  "title": "Intel EDS Components",
+  "groups": [
+    {
+      "title": "Content Blocks",
+      "id": "content-blocks",
+      "components": [
+        {
+          "title": "Carousel Hero",
+          "id": "carousel-hero",
+          "description": "A rotating hero carousel with product badge images, eyebrow text, headlines, and CTAs. Used on the homepage.",
+          "model": "carousel-hero",
+          "thumbnail": "/icons/block-carousel.svg"
+        },
+        {
+          "title": "Hero",
+          "id": "hero",
+          "description": "Full-width hero banner with background image, heading, description, and optional CTA.",
+          "model": "hero",
+          "thumbnail": "/icons/block-hero.svg"
+        },
+        {
+          "title": "Cards News",
+          "id": "cards-news",
+          "description": "Text-only news article cards with category label, heading, description, and CTA link.",
+          "model": "cards-news",
+          "thumbnail": "/icons/block-cards.svg"
+        },
+        {
+          "title": "Cards Quicklinks",
+          "id": "cards-quicklinks",
+          "description": "Icon and label utility link tiles for quick navigation (Downloads, Support, etc.).",
+          "model": "cards-quicklinks",
+          "thumbnail": "/icons/block-cards.svg"
+        },
+        {
+          "title": "Cards Product",
+          "id": "cards-product",
+          "description": "Product showcase cards with image, heading link, description, and CTA. For dark sections.",
+          "model": "cards-product",
+          "thumbnail": "/icons/block-cards.svg"
+        },
+        {
+          "title": "Cards Resource",
+          "id": "cards-resource",
+          "description": "Simple title-link resource cards in a grid. For dark sections.",
+          "model": "cards-resource",
+          "thumbnail": "/icons/block-cards.svg"
+        },
+        {
+          "title": "Columns",
+          "id": "columns",
+          "description": "Side-by-side content layout with text and images. Supports alternating patterns.",
+          "model": "columns",
+          "thumbnail": "/icons/block-columns.svg"
+        }
+      ]
+    },
+    {
+      "title": "Stub Blocks",
+      "id": "stub-blocks",
+      "components": [
+        {
+          "title": "Retailer Locator",
+          "id": "retailer-locator",
+          "description": "Placeholder for retailer/shop dropdown functionality. Black background with white text.",
+          "model": "retailer-locator"
+        },
+        {
+          "title": "Social Feed",
+          "id": "social-feed",
+          "description": "Placeholder for social media feed integration.",
+          "model": "social-feed"
+        },
+        {
+          "title": "Virtual Assistant",
+          "id": "virtual-assistant",
+          "description": "Placeholder for support chatbot integration.",
+          "model": "virtual-assistant"
+        },
+        {
+          "title": "Cookie Consent",
+          "id": "cookie-consent",
+          "description": "Placeholder for cookie consent management.",
+          "model": "cookie-consent"
+        },
+        {
+          "title": "Product Comparison",
+          "id": "product-comparison",
+          "description": "Placeholder for product comparison tool.",
+          "model": "product-comparison"
+        }
+      ]
+    }
+  ]
+}

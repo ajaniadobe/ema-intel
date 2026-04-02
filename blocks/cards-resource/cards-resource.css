@@ -3,25 +3,34 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
 }
 
 .cards-resource > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 4px;
+  background-color: rgb(255 255 255 / 5%);
+  padding: 20px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.cards-resource > ul > li:hover {
+  border-color: rgb(255 255 255 / 30%);
+  background-color: rgb(255 255 255 / 10%);
 }
 
 .cards-resource .cards-resource-card-body {
-  margin: 16px;
+  margin: 0;
 }
 
-.cards-resource .cards-resource-card-image {
-  line-height: 0;
+.cards-resource .cards-resource-card-body a {
+  color: #5898ff;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-.cards-resource > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.cards-resource .cards-resource-card-body a:hover {
+  text-decoration: underline;
 }

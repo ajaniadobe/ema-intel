@@ -194,7 +194,7 @@
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
-  --body-line-height: 1.6;
+  --body-line-height: 1.15;
 
   /* misc */
   --header-height: 64px;
@@ -356,6 +356,28 @@ main {
       padding-inline-start: 12px;
     }
   }
+
+  /* News section heading - smaller per Intel original */
+  .section:has(.cards-news) > .default-content h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  /* Brand statement heading - large centered per Intel original */
+  .section:has(.cards-quicklinks) > .default-content h2 {
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 800px;
+    margin: 0 auto 32px;
+  }
+
+  /* Paragraphs in default content */
+  p {
+    line-height: 1.5;
+    margin-block: 0.75em;
+  }
 }
 
 button {
@@ -425,6 +447,31 @@ svg {
 
 .section.shaded {
   background-color: var(--color-intel-light-blue-tint);
+}
+
+/* Footer styling */
+footer {
+  border-top: 1px solid #e0e0e0;
+  font-size: 12px;
+}
+
+footer a {
+  color: #667389;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .section-copyright {
+  font-size: 9px;
+  color: #667389;
+}
+
+footer .section-legal a {
+  font-size: 11px;
+  color: #667389;
 }
 
 /* Mobile-first responsive heading scale */

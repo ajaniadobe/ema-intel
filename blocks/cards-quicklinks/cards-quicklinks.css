@@ -54,7 +54,7 @@
   text-decoration: underline;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .cards-quicklinks > ul {
     grid-template-columns: repeat(4, 1fr);
   }

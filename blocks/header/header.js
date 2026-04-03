@@ -110,9 +110,18 @@ async function decorateAction(header, pattern) {
   if (pattern === '/tools/widgets/toggle') decorateNavToggle(btn);
 }
 
-function decorateMenu() {
-  // TODO: finish single menu support
-  return null;
+function decorateMenu(li) {
+  // Support nested <ul> as a dropdown menu (DA strips .fragment-content wrappers)
+  const nestedUl = li.querySelector(':scope > ul');
+  if (!nestedUl) return null;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'mega-menu';
+  const content = document.createElement('div');
+  content.className = 'fragment-content';
+  content.append(nestedUl);
+  wrapper.append(content);
+  li.append(wrapper);
+  return wrapper;
 }
 
 function decorateMegaMenu(li) {
@@ -140,11 +149,26 @@ function decorateNavItem(li) {
 function decorateBrandSection(section) {
   section.classList.add('brand-section');
   const brandLink = section.querySelector('a');
-  const [, text] = brandLink.childNodes;
+  if (!brandLink) return;
+
+  // Find text nodes (not images/pictures) and wrap in brand-text span
+  const textNodes = [...brandLink.childNodes].filter(
+    (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim(),
+  );
+  const existingSpans = [...brandLink.querySelectorAll(':scope > span')].filter(
+    (s) => !s.querySelector('picture') && !s.querySelector('img'),
+  );
+
   const span = document.createElement('span');
   span.className = 'brand-text';
-  span.append(text);
-  brandLink.append(span);
+  if (textNodes.length) {
+    textNodes.forEach((t) => span.append(t));
+  } else if (existingSpans.length) {
+    existingSpans.forEach((s) => span.append(s));
+  }
+  if (span.textContent.trim()) {
+    brandLink.append(span);
+  }
 }
 
 function decorateNavSection(section) {

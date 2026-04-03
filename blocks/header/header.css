@@ -11,7 +11,8 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--header-height);
-  background-color: light-dark(var(--color-light), var(--color-dark));
+  background-color: var(--color-intel-dark-navy);
+  color: #fff;
 
   ul {
     margin: 0;
@@ -26,6 +27,7 @@ header {
 
   a {
     text-decoration: none;
+    color: #fff;
   }
 
   .btn {
@@ -212,16 +214,30 @@ header {
     .main-nav-link {
       display: block;
       line-height: 64px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     .menu,
     .mega-menu {
       display: none;
+      background-color: var(--color-intel-dark-navy);
+      color: #fff;
+    }
+
+    .mega-menu a {
+      color: #b0c4de;
+      font-size: 14px;
+    }
+
+    .mega-menu a:hover {
+      color: #fff;
     }
 
     .is-open {
       .main-nav-link {
-        border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+        border-bottom: 1px solid rgb(255 255 255 / 15%);
       }
 
       .menu,

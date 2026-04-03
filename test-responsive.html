@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Test</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/blocks/carousel-hero/carousel-hero.css">
+  <link rel="stylesheet" href="/blocks/cards-news/cards-news.css">
+  <link rel="stylesheet" href="/blocks/cards-quicklinks/cards-quicklinks.css">
+  <link rel="stylesheet" href="/blocks/cards-product/cards-product.css">
+  <link rel="stylesheet" href="/blocks/cards-resource/cards-resource.css">
+  <link rel="stylesheet" href="/blocks/hero/hero.css">
+  <link rel="stylesheet" href="/blocks/columns/columns.css">
+  <link rel="stylesheet" href="/blocks/retailer-locator/retailer-locator.css">
+  <style>
+    /* Override hidden defaults for testing */
+    body { padding: 0; font-family: Montserrat, "Trebuchet MS", sans-serif; }
+    main > div { display: block !important; }
+    .section { padding: 32px 0; }
+    .section > .default-content { max-width: 83.4%; margin: 0 auto; }
+    .section.dark { background-color: #000f28; color: #fff; }
+    .section.dark a:not(.btn) { color: #5898ff; }
+    .section.dark h1, .section.dark h2, .section.dark h3 { color: #fff; }
+    .block-wrapper { max-width: 83.4%; margin: 0 auto; }
+    @media (min-width: 1440px) { .section > .default-content, .block-wrapper { max-width: 1200px; } }
+  </style>
+</head>
+<body>
+<main>
+  <!-- SECTION 1: Carousel Hero (dark) -->
+  <div class="section dark">
+    <div class="block-wrapper">
+      <div class="carousel-hero">
+        <div>
+          <div><img src="/media/intel/homepage/homepage-vpro-badge-glow-1080x1080.jpg" alt="Product badge for Intel vPro" style="max-width:200px"></div>
+          <div>
+            <p style="font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;color:#5898ff">Intel vPro®</p>
+            <h2>Secure and scale your PC fleet</h2>
+            <p>Discover AI-optimized PCs built to help protect your data, systems, and people.</p>
+            <p><a href="#">Explore the platform</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: News Cards -->
+  <div class="section">
+    <div class="default-content">
+      <h2><a href="#">See the latest news</a></h2>
+    </div>
+    <div class="block-wrapper">
+      <div class="cards-news">
+        <ul>
+          <li><div class="cards-news-card-body"><p>Innovation</p><h3>Intel named one of America's Most Innovative Companies</h3><p>Fortune recognizes Intel's industry-leading innovations.</p><p><a href="#">Read the story</a></p></div></li>
+          <li><div class="cards-news-card-body"><p>Performance</p><h3>The Verge reviews Intel's latest laptop leap</h3><p>"Powerful enough for 1080p gaming at high settings."</p><p><a href="#">See the full review</a></p></div></li>
+          <li><div class="cards-news-card-body"><p>Productivity</p><h3>A breakthrough moment for Intel</h3><p>Just Josh finds Intel Core Ultra X9 makes a big jump.</p><p><a href="#">Watch the review</a></p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Brand Statement + Quicklinks -->
+  <div class="section">
+    <div class="default-content">
+      <h2>We break barriers so builders can move faster, from prototype to global scale. That's the power of Intel Inside®</h2>
+    </div>
+    <div class="block-wrapper">
+      <div class="cards-quicklinks">
+        <ul>
+          <li><div class="cards-quicklinks-card-image"><img src="/icons/download.svg" alt="download"></div><div class="cards-quicklinks-card-body"><a href="#">Downloads</a></div></li>
+          <li><div class="cards-quicklinks-card-image"><img src="/icons/explore.svg" alt="explore"></div><div class="cards-quicklinks-card-body"><a href="#">Product Specs</a></div></li>
+          <li><div class="cards-quicklinks-card-image"><img src="/icons/support.svg" alt="support"></div><div class="cards-quicklinks-card-body"><a href="#">Support</a></div></li>
+          <li><div class="cards-quicklinks-card-image"><img src="/icons/signup.svg" alt="signup"></div><div class="cards-quicklinks-card-body"><a href="#">Developer Zone</a></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Product Cards (dark) -->
+  <div class="section dark">
+    <div class="block-wrapper">
+      <div class="cards-product">
+        <ul>
+          <li><div class="cards-product-card-image"><img src="/media/intel/shared/30s-vid-intel-pro-rpl-14thg-gameplay-ag-na-hqprim-na-us-eng-16x9-video-thumbnail.jpg" alt="Gaming Desktop"></div><div class="cards-product-card-body"><h3><a href="#">Gaming Desktops</a></h3><p>Intel Core Ultra processors deliver the performance and efficiency to power your next win.</p><p><a href="#">Discover the lineup</a></p></div></li>
+          <li><div class="cards-product-card-image"><img src="/media/intel/shared/15s-vid-intel-pro-rplh-14thg-ag-na-hqprim-na-us-eng-16x9-video-thumbnail.jpg" alt="Gaming Laptop"></div><div class="cards-product-card-body"><h3><a href="#">Gaming Laptops</a></h3><p>Desktop power, laptop freedom. Ultra-fast Intel Wi-Fi 7 and Thunderbolt 5.</p><p><a href="#">Discover the lineup</a></p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Resource Cards (dark) -->
+  <div class="section dark">
+    <div class="default-content">
+      <h2>Up Your Game. Get Expert Tips</h2>
+    </div>
+    <div class="block-wrapper">
+      <div class="cards-resource">
+        <ul>
+          <li><div class="cards-resource-card-body"><a href="#">How to Build a Gaming PC</a></div></li>
+          <li><div class="cards-resource-card-body"><a href="#">How to Fix High CPU Usage</a></div></li>
+          <li><div class="cards-resource-card-body"><a href="#">Overclocking Your Unlocked Intel Core</a></div></li>
+          <li><div class="cards-resource-card-body"><a href="#">How to Find the Right Budget Gaming PC</a></div></li>
+          <li><div class="cards-resource-card-body"><a href="#">How to Choose a Prebuilt Gaming PC</a></div></li>
+          <li><div class="cards-resource-card-body"><a href="#">How to Choose Prebuilt vs Custom PC</a></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Retailer Locator Stub (dark) -->
+  <div class="section dark">
+    <div class="block-wrapper">
+      <div class="retailer-locator">
+        <h2>Shop Gaming Systems</h2>
+        <p>Retailer locator coming soon. Visit intel.com/buy for current options.</p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

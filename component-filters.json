@@ -1,0 +1,39 @@
+{
+  "filters": [
+    {
+      "id": "section",
+      "components": [
+        "carousel-hero",
+        "hero",
+        "cards-news",
+        "cards-quicklinks",
+        "cards-product",
+        "cards-resource",
+        "columns",
+        "retailer-locator",
+        "social-feed",
+        "virtual-assistant",
+        "cookie-consent",
+        "product-comparison"
+      ]
+    },
+    {
+      "id": "hero-section",
+      "components": [
+        "carousel-hero",
+        "hero"
+      ]
+    },
+    {
+      "id": "dark-section",
+      "components": [
+        "carousel-hero",
+        "hero",
+        "cards-product",
+        "cards-resource",
+        "retailer-locator",
+        "columns"
+      ]
+    }
+  ]
+}

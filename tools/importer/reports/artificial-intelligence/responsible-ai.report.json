@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/responsible-ai.html",
+  "path": "artificial-intelligence/responsible-ai",
+  "timestamp": "2026-04-03T21:01:14.288Z",
+  "title": "Responsible AI",
+  "template": "institutional-landing",
+  "blocks": [
+    "cards-news",
+    "cards-news"
+  ]
+}

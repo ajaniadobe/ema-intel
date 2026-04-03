@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/environment/sustainability.html",
+  "path": "environment/sustainability",
+  "timestamp": "2026-04-03T20:58:58.658Z",
+  "title": "Sustainable Computing for a Sustainable Future",
+  "template": "marketing-landing",
+  "blocks": [
+    "hero",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "retailer-locator"
+  ]
+}

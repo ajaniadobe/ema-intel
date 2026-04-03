@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/ai-pc/overview.html",
+  "path": "ai-pc/overview",
+  "timestamp": "2026-04-03T20:58:16.627Z",
+  "title": "The AI PC Powered by Intel. Now AI Is for Everyone",
+  "template": "marketing-landing",
+  "blocks": [
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "columns",
+    "columns",
+    "columns",
+    "cards-resource"
+  ]
+}

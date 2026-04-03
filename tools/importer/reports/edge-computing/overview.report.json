@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/edge-computing/overview.html",
+  "path": "edge-computing/overview",
+  "timestamp": "2026-04-03T20:58:36.863Z",
+  "title": "Edge Computing Solutions – Intel",
+  "template": "marketing-landing",
+  "blocks": [
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "columns",
+    "columns",
+    "retailer-locator",
+    "retailer-locator",
+    "retailer-locator",
+    "retailer-locator",
+    "cards-resource"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/analytics.html",
+  "path": "artificial-intelligence/analytics",
+  "timestamp": "2026-04-03T20:58:48.245Z",
+  "title": "Advanced Analytics Solutions – Intel",
+  "template": "marketing-landing",
+  "blocks": [
+    "hero",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-resource"
+  ]
+}

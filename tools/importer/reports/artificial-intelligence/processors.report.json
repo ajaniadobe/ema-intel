@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/processors.html",
+  "path": "artificial-intelligence/processors",
+  "timestamp": "2026-04-03T20:58:23.438Z",
+  "title": "Artificial Intelligence (AI) Processors – Intel",
+  "template": "marketing-landing",
+  "blocks": [
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "columns",
+    "columns",
+    "columns"
+  ]
+}

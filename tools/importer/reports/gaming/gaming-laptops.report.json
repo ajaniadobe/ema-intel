@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/gaming/gaming-laptops.html",
+  "path": "gaming/gaming-laptops",
+  "timestamp": "2026-04-03T20:58:02.540Z",
+  "title": "Gaming Laptops Powered by Intel® Core Ultra Series 2",
+  "template": "marketing-landing",
+  "blocks": [
+    "hero",
+    "cards-resource"
+  ]
+}

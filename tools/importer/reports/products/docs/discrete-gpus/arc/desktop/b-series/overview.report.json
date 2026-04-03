@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/desktop/b-series/overview.html",
+  "path": "products/docs/discrete-gpus/arc/desktop/b-series/overview",
+  "timestamp": "2026-04-03T20:58:42.572Z",
+  "title": "Intel® Arc™ B-Series Graphics for Desktops",
+  "template": "marketing-landing",
+  "blocks": [
+    "cards-product",
+    "columns",
+    "columns",
+    "columns",
+    "columns",
+    "cards-resource"
+  ]
+}

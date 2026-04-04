@@ -70,6 +70,38 @@ var CustomImportScript = (() => {
         '[class*="onetrust"]',
         '[id*="CookiebotDialog"]'
       ]);
+      const mainEl = element.querySelector("main#primary-content, main");
+      if (mainEl) {
+        const children = [...element.children];
+        children.forEach((child) => {
+          if (child !== mainEl) {
+            child.remove();
+          }
+        });
+        while (mainEl.firstChild) {
+          element.appendChild(mainEl.firstChild);
+        }
+        mainEl.remove();
+      }
+      WebImporter.DOMUtils.remove(element, [
+        "footer.global",
+        'footer[id="skip-footer"]',
+        ".get-help-blade",
+        "div.get-help"
+      ]);
+      element.querySelectorAll('link[rel="stylesheet"]').forEach((link) => link.remove());
+      element.querySelectorAll(".navbar-toggler-title").forEach((span) => {
+        if (span.textContent.trim() === "Get Help") {
+          const btn = span.closest("button") || span.closest(".get-help");
+          if (btn) btn.remove();
+          else span.remove();
+        }
+      });
+      element.querySelectorAll('[class*="get-help"]').forEach((el) => el.remove());
+      element.querySelectorAll('link[href*="clientlibs"], script[src*="clientlibs"]').forEach((el) => el.remove());
+      element.querySelectorAll("script").forEach((s) => {
+        if (!s.src) s.remove();
+      });
     }
     if (hookName === H.after) {
       WebImporter.DOMUtils.remove(element, [
@@ -82,6 +114,129 @@ var CustomImportScript = (() => {
         "iframe",
         "link"
       ]);
+      element.querySelectorAll('a[href="#primary-content"]').forEach((a) => {
+        const p = a.closest("p");
+        if (p) p.remove();
+      });
+      element.querySelectorAll('img[alt*="Intel logo - Return"]').forEach((img) => {
+        var _a;
+        const p = img.closest("p") || ((_a = img.closest("a")) == null ? void 0 : _a.closest("p"));
+        if (p) p.remove();
+      });
+      element.querySelectorAll("p").forEach((p) => {
+        if (p.textContent.trim() === "Toggle Navigation") p.remove();
+      });
+      element.querySelectorAll("ol").forEach((ol) => {
+        var _a;
+        const items = ol.querySelectorAll(":scope > li");
+        if (items.length > 0) {
+          const firstText = ((_a = items[0].textContent) == null ? void 0 : _a.trim()) || "";
+          if (firstText.startsWith("Products")) {
+            ol.remove();
+          }
+        }
+      });
+      element.querySelectorAll("p").forEach((p) => {
+        const text = p.textContent.trim();
+        if (/^Sign In My Intel$|^My Tools$|^Sign Out$|^English$|^Toggle Search$|^close$|^Search$|^Feedback$|^ChatBot Btn$|^Expand$|^Collapse$/.test(text) || text.startsWith("Search ") && text.includes("Search Intel.com") || text === "?") {
+          p.remove();
+        }
+      });
+      element.querySelectorAll("li").forEach((li) => {
+        if (li.textContent.trim() === "?" && li.children.length === 0) li.remove();
+      });
+      element.querySelectorAll("h2").forEach((h2) => {
+        if (h2.textContent.trim() === "Select Your Language") {
+          let sibling = h2.nextElementSibling;
+          let removed = 0;
+          while (sibling && removed < 2) {
+            const next = sibling.nextElementSibling;
+            if (sibling.tagName === "UL") {
+              sibling.remove();
+              removed++;
+            } else {
+              break;
+            }
+            sibling = next;
+          }
+          h2.remove();
+        }
+      });
+      ["Using Intel.com Search", "Quick Links", "Recent Searches", "Advanced Search", "Only search in"].forEach((text) => {
+        element.querySelectorAll("h3").forEach((h3) => {
+          if (h3.textContent.trim() === text) {
+            let sibling = h3.nextElementSibling;
+            while (sibling && !["H1", "H2", "H3", "DIV"].includes(sibling.tagName)) {
+              const next = sibling.nextElementSibling;
+              sibling.remove();
+              sibling = next;
+            }
+            h3.remove();
+          }
+        });
+      });
+      element.querySelectorAll("p").forEach((p) => {
+        if (p.textContent.trim().match(/^Sign [Ii]n\s+to access restricted content\.?$/)) {
+          p.remove();
+        }
+      });
+      element.querySelectorAll("p").forEach((p) => {
+        if (p.textContent.includes("browser version you are using is not recommended")) {
+          const next = p.nextElementSibling;
+          if (next && next.tagName === "UL") {
+            const browsers = next.querySelectorAll("a");
+            const isBrowserList = [...browsers].some((a) => /Safari|Chrome|Edge|Firefox/.test(a.textContent));
+            if (isBrowserList) next.remove();
+          }
+          p.remove();
+        }
+      });
+      element.querySelectorAll("p").forEach((p) => {
+        const text = p.textContent.trim();
+        if (text === "Get Help") p.remove();
+        if (text.startsWith('<link rel="stylesheet"') || text.startsWith("<script")) p.remove();
+      });
+      element.querySelectorAll("ul").forEach((ul) => {
+        const links = ul.querySelectorAll("a");
+        if (links.length >= 5) {
+          const hrefs = [...links].map((a) => a.getAttribute("href") || "");
+          if (hrefs.some((h) => h.includes("company-overview")) && hrefs.some((h) => h.includes("newsroom"))) {
+            ul.remove();
+          }
+        }
+      });
+      element.querySelectorAll("ul").forEach((ul) => {
+        const links = ul.querySelectorAll("a");
+        if (links.length >= 3) {
+          const hrefs = [...links].map((a) => a.getAttribute("href") || "");
+          if (hrefs.some((h) => h.includes("facebook.com/Intel")) && hrefs.some((h) => h.includes("twitter.com/intel"))) {
+            ul.remove();
+          }
+        }
+      });
+      element.querySelectorAll("ul").forEach((ul) => {
+        const links = ul.querySelectorAll("a");
+        if (links.length >= 4) {
+          const hrefs = [...links].map((a) => a.getAttribute("href") || "");
+          if (hrefs.some((h) => h.includes("terms-of-use")) && hrefs.some((h) => h.includes("trademarks"))) {
+            ul.remove();
+          }
+        }
+      });
+      element.querySelectorAll("p").forEach((p) => {
+        if (p.textContent.includes("Intel technologies may require enabled hardware")) {
+          p.remove();
+        }
+      });
+      element.querySelectorAll('img[alt="Intel Footer Logo"]').forEach((img) => {
+        var _a;
+        const p = img.closest("p") || ((_a = img.closest("a")) == null ? void 0 : _a.closest("p"));
+        if (p) p.remove();
+      });
+      element.querySelectorAll('a[href="javascript:void();"]').forEach((a) => {
+        const p = a.closest("p");
+        if (p) p.remove();
+      });
       element.querySelectorAll("*").forEach((el) => {
         el.removeAttribute("data-cmp-link-accessibility-enabled");
         el.removeAttribute("data-cmp-link-accessibility-text");

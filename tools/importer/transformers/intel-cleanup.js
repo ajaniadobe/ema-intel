@@ -62,6 +62,28 @@ export default function transform(hookName, element, payload) {
     // Remove Intel.com commons-page and campaign CSS/JS references embedded in content
     element.querySelectorAll('link[href*="clientlibs"], script[src*="clientlibs"]').forEach((el) => el.remove());
 
+    // Remove decorative SVG background images from clientlibs (don't work as inline <img>)
+    element.querySelectorAll('img[src*="clientlibs"][src*="svg-backgrounds"]').forEach((img) => {
+      const p = img.closest('p');
+      if (p) p.remove();
+      else img.remove();
+    });
+
+    // Remove sprite sheet images from clientlibs (don't work as inline <img>)
+    element.querySelectorAll('img[src*="clientlibs"][src*="spritedsa"]').forEach((img) => {
+      const p = img.closest('p');
+      if (p) p.remove();
+      else img.remove();
+    });
+
+    // Replace printlogo.png (OG image) with local Intel logo in metadata
+    element.querySelectorAll('img[src*="clientlibs"][src*="printlogo"]').forEach((img) => {
+      img.setAttribute('src', '/img/intel-logo.svg');
+    });
+
+    // Remove all remaining <link> and <style> elements (may become text in output)
+    element.querySelectorAll('link, style').forEach((el) => el.remove());
+
     // Remove inline <script> blocks (CQ_Analytics, etc.)
     element.querySelectorAll('script').forEach((s) => {
       if (!s.src) s.remove();

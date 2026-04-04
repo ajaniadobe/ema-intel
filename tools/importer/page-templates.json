@@ -74,23 +74,34 @@
       "blocks": [
         {
           "name": "hero",
-          "instances": ["section.ihp-hero-full-bleed"]
+          "instances": [
+            "section.ihp-hero-full-bleed"
+          ]
         },
         {
           "name": "cards-product",
-          "instances": ["div.twoColumn.section:has(.fifty-fifty)", "div.promotions.section"]
+          "instances": [
+            "div.twoColumn.section:has(.fifty-fifty)",
+            "div.promotions.section"
+          ]
         },
         {
           "name": "columns",
-          "instances": ["div.twoColumn.section:has(.two-column)"]
+          "instances": [
+            "div.twoColumn.section:has(.two-column)"
+          ]
         },
         {
           "name": "retailer-locator",
-          "instances": ["div.linklist.section"]
+          "instances": [
+            "div.linklist.section"
+          ]
         },
         {
           "name": "cards-resource",
-          "instances": ["div.simpleCard.section"]
+          "instances": [
+            "div.simpleCard.section"
+          ]
         }
       ],
       "sections": [
@@ -99,7 +110,9 @@
           "name": "Hero",
           "selector": "section.ihp-hero-full-bleed",
           "style": "dark",
-          "blocks": ["hero"],
+          "blocks": [
+            "hero"
+          ],
           "defaultContent": []
         },
         {
@@ -107,15 +120,22 @@
           "name": "Overview Content",
           "selector": "div#introtext_copy",
           "style": "dark",
-          "blocks": ["cards-product"],
-          "defaultContent": ["div#introtext_copy .intro-text-component", "div#introtext .intro-text-component"]
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div#introtext_copy .intro-text-component",
+            "div#introtext .intro-text-component"
+          ]
         },
         {
           "id": "section-3",
           "name": "Platform Advantages",
           "selector": "div.introtext.section:nth-of-type(3)",
           "style": "dark",
-          "blocks": ["columns"],
+          "blocks": [
+            "columns"
+          ],
           "defaultContent": []
         },
         {
@@ -123,8 +143,14 @@
           "name": "Shop and Resources",
           "selector": "div.linklist.section",
           "style": "dark",
-          "blocks": ["retailer-locator", "cards-resource"],
-          "defaultContent": ["div.oneColumn.section", "div.reference.section"]
+          "blocks": [
+            "retailer-locator",
+            "cards-resource"
+          ],
+          "defaultContent": [
+            "div.oneColumn.section",
+            "div.reference.section"
+          ]
         },
         {
           "id": "section-5",
@@ -132,7 +158,9 @@
           "selector": "div.disclaimer",
           "style": null,
           "blocks": [],
-          "defaultContent": ["div.disclaimer"]
+          "defaultContent": [
+            "div.disclaimer"
+          ]
         }
       ]
     },
@@ -146,7 +174,9 @@
       "blocks": [
         {
           "name": "hero",
-          "instances": ["div.marquee-search"]
+          "instances": [
+            "div.marquee-search"
+          ]
         }
       ],
       "sections": [
@@ -155,7 +185,9 @@
           "name": "Hero Search",
           "selector": "div.marquee-search",
           "style": "dark",
-          "blocks": ["hero"],
+          "blocks": [
+            "hero"
+          ],
           "defaultContent": []
         },
         {
@@ -164,7 +196,9 @@
           "selector": "div.linklist.section",
           "style": null,
           "blocks": [],
-          "defaultContent": ["div.blade-list"]
+          "defaultContent": [
+            "div.blade-list"
+          ]
         },
         {
           "id": "section-3",
@@ -172,7 +206,9 @@
           "selector": "div.oneColumn.section",
           "style": "dark",
           "blocks": [],
-          "defaultContent": ["div.one-column"]
+          "defaultContent": [
+            "div.one-column"
+          ]
         }
       ]
     },
@@ -186,20 +222,30 @@
       "blocks": [
         {
           "name": "hero",
-          "instances": ["div.marquee-search", "section.ihp-hero-full-bleed"]
+          "instances": [
+            "div.marquee-search",
+            "section.ihp-hero-full-bleed"
+          ]
         },
         {
           "name": "cards-news",
-          "instances": ["div.promotions.section"]
+          "instances": [
+            "div.promotions.section"
+          ]
         }
       ],
       "sections": [
         {
           "id": "section-1",
           "name": "Hero",
-          "selector": ["div.marquee-search", "section.ihp-hero-full-bleed"],
+          "selector": [
+            "div.marquee-search",
+            "section.ihp-hero-full-bleed"
+          ],
           "style": "dark",
-          "blocks": ["hero"],
+          "blocks": [
+            "hero"
+          ],
           "defaultContent": []
         },
         {
@@ -207,7 +253,9 @@
           "name": "Main Content",
           "selector": "div.bladepar",
           "style": null,
-          "blocks": ["cards-news"],
+          "blocks": [
+            "cards-news"
+          ],
           "defaultContent": []
         },
         {
@@ -216,7 +264,9 @@
           "selector": "div.oneColumn.section",
           "style": "dark",
           "blocks": [],
-          "defaultContent": ["div.one-column"]
+          "defaultContent": [
+            "div.one-column"
+          ]
         }
       ]
     }

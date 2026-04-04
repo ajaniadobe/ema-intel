@@ -96,6 +96,10 @@ export default function init(el) {
   el.setAttribute('role', 'region');
   el.setAttribute('aria-roledescription', 'Carousel');
 
+  // Set background image (cube-shadow) as CSS custom property
+  const bgUrl = 'https://www.intel.com/content/dam/logos/cube-shadow.png';
+  el.style.setProperty('--carousel-hero-bg', `url(${bgUrl})`);
+
   const container = document.createElement('div');
   container.classList.add('carousel-hero-slides-container');
 
@@ -105,13 +109,13 @@ export default function init(el) {
 
   let slideIndicators;
   if (!isSingleSlide) {
-    const slideIndicatorsNav = document.createElement('nav');
-    slideIndicatorsNav.setAttribute('aria-label', 'Carousel Slide Controls');
+    // Vertical slide indicators (positioned via CSS)
     slideIndicators = document.createElement('ol');
     slideIndicators.classList.add('carousel-hero-slide-indicators');
-    slideIndicatorsNav.append(slideIndicators);
-    el.append(slideIndicatorsNav);
+    slideIndicators.setAttribute('aria-label', 'Carousel Slide Controls');
+    el.append(slideIndicators);
 
+    // Keep nav buttons in DOM for JS binding (hidden via CSS)
     const slideNavButtons = document.createElement('div');
     slideNavButtons.classList.add('carousel-hero-navigation-buttons');
     slideNavButtons.innerHTML = `
@@ -141,4 +145,8 @@ export default function init(el) {
   if (!isSingleSlide) {
     bindEvents(el);
   }
+
+  // Set first slide as active on init
+  const firstSlide = el.querySelector('.carousel-hero-slide');
+  if (firstSlide) updateActiveSlide(firstSlide);
 }

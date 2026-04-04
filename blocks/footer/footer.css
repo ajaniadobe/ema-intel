@@ -1,22 +1,111 @@
 footer {
+  background-color: var(--color-light);
+  border-top: 1px solid #e0e0e0;
+
   a {
     text-decoration: none;
+    color: var(--color-dark);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .footer-content {
     max-width: var(--grid-container-width);
-    margin: 48px auto;
+    margin: 0 auto;
+    padding: 40px 24px;
     font-size: 14px;
+    line-height: 1.6;
   }
 
-  .section-legal ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  /* Section 1: Logo + Company Links + Social Links */
+  .section:first-child {
+    .default-content {
+      max-width: initial;
+      margin: initial;
+    }
+
+    /* Logo */
+    p:first-child img {
+      width: 80px;
+      height: auto;
+    }
+
+    /* Company links list */
+    ul:first-of-type {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        font-size: 14px;
+        color: rgb(102 115 137);
+      }
+    }
+
+    /* Social links list */
+    ul:last-of-type {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+      display: flex;
+      gap: 16px;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-dark);
+      }
+    }
   }
 
-  .section-copyright p {
-    margin: 0;
+  /* Section 2: Legal Links */
+  .section-legal {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      font-size: 11px;
+      color: rgb(102 115 137);
+    }
+  }
+
+  /* Section 3: Copyright */
+  .section-copyright {
+    margin-top: 16px;
+
+    p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.5;
+      color: rgb(102 115 137);
+    }
   }
 
   .section {
@@ -29,29 +118,20 @@ footer {
 
 @media (width >= 900px) {
   footer {
-    margin: 0;
+    .footer-content {
+      padding: 48px 40px;
+    }
 
-    .section-legal {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
-      margin-bottom: 24px;
-
-      ul {
-        display: flex;
-        justify-content: end;
-        gap: var(--spacing-xl);
-      }
-
-      li {
-        margin: 0;
+    .section:first-child {
+      ul:first-of-type {
+        gap: 8px 32px;
       }
     }
 
-    .section-copyright {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
+    .section-legal {
+      ul {
+        gap: 8px 24px;
+      }
     }
   }
 }

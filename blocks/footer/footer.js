@@ -23,7 +23,29 @@ export default async function init(el) {
     const legal = sections.pop();
     legal.classList.add('section-legal');
 
+    // Replace optimized <picture> logo with direct <img> for SVG
+    const logoPicture = fragment.querySelector('.section:first-child picture');
+    if (logoPicture) {
+      const img = logoPicture.querySelector('img');
+      if (img) {
+        const directImg = document.createElement('img');
+        directImg.src = '/img/intel-logo.svg';
+        directImg.alt = img.alt || 'Intel';
+        directImg.loading = 'lazy';
+        logoPicture.replaceWith(directImg);
+      }
+    }
+
     el.append(fragment);
+
+    // Fix YouTube auto-embed: restore video wrapper back to a plain link
+    // Must run after append so the DOM is fully decorated
+    el.querySelectorAll('.video').forEach((wrapper) => {
+      const li = wrapper.closest('li');
+      if (li) {
+        li.innerHTML = '<a href="https://www.youtube.com/user/channelintel">YouTube</a>';
+      }
+    });
   } catch (e) {
     throw Error(e);
   }

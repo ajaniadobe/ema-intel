@@ -1,0 +1,48 @@
+.support-tiles > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.support-tiles > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.support-tiles .support-tiles-icon {
+  margin-bottom: 12px;
+  line-height: 0;
+}
+
+.support-tiles .support-tiles-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.support-tiles .support-tiles-text {
+  margin: 0;
+}
+
+.support-tiles .support-tiles-text a {
+  color: var(--color-intel-blue);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.support-tiles .support-tiles-text a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
+  .support-tiles > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

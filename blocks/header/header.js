@@ -1,6 +1,5 @@
 import { getConfig, getMetadata } from '../../scripts/ak.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { setColorScheme } from '../section-metadata/section-metadata.js';
 
 const { locale } = getConfig();
 
@@ -10,6 +9,8 @@ const HEADER_ACTIONS = [
   '/tools/widgets/language',
   '/tools/widgets/toggle',
 ];
+
+const SIGN_IN_URL = 'https://www.intel.com/content/www/us/en/secure/my-intel.html';
 
 function closeAllMenus() {
   const openMenus = document.body.querySelectorAll('header .is-open');
@@ -55,34 +56,16 @@ function decorateLanguage(btn) {
 }
 
 function decorateScheme(btn) {
-  btn.addEventListener('click', async () => {
-    const { body } = document;
-
-    let currPref = localStorage.getItem('color-scheme');
-    if (!currPref) {
-      currPref = matchMedia('(prefers-color-scheme: dark)')
-        .matches ? 'dark-scheme' : 'light-scheme';
-    }
-
-    const theme = currPref === 'dark-scheme'
-      ? { add: 'light-scheme', remove: 'dark-scheme' }
-      : { add: 'dark-scheme', remove: 'light-scheme' };
-
-    body.classList.remove(theme.remove);
-    body.classList.add(theme.add);
-    localStorage.setItem('color-scheme', theme.add);
-    // Re-calculatie section schemes
-    const sections = document.querySelectorAll('.section');
-    for (const section of sections) {
-      setColorScheme(section);
-    }
+  // Sign In: redirect to sign-in page
+  btn.addEventListener('click', () => {
+    window.location.href = SIGN_IN_URL;
   });
 }
 
-function decorateNavToggle(btn) {
+function decorateSearch(btn) {
+  const section = btn.closest('.section');
   btn.addEventListener('click', () => {
-    const header = document.body.querySelector('header');
-    if (header) header.classList.toggle('is-mobile-open');
+    toggleMenu(section);
   });
 }
 
@@ -92,8 +75,20 @@ async function decorateAction(header, pattern) {
 
   const icon = link.querySelector('.icon');
   const text = link.textContent;
+  const iconName = icon?.classList?.[1]?.replace('icon-', '') || '';
   const btn = document.createElement('button');
-  if (icon) btn.append(icon);
+
+  // Use inline <img> for reliable SVG icon rendering
+  if (iconName) {
+    const img = document.createElement('img');
+    img.src = `/icons/${iconName}.svg`;
+    img.alt = '';
+    img.className = 'action-icon';
+    img.width = 20;
+    img.height = 20;
+    btn.append(img);
+  }
+
   if (text) {
     const textSpan = document.createElement('span');
     textSpan.className = 'text';
@@ -101,13 +96,13 @@ async function decorateAction(header, pattern) {
     btn.append(textSpan);
   }
   const wrapper = document.createElement('div');
-  wrapper.className = `action-wrapper ${icon.classList[1].replace('icon-', '')}`;
+  wrapper.className = `action-wrapper ${iconName}`;
   wrapper.append(btn);
   link.parentElement.parentElement.replaceChild(wrapper, link.parentElement);
 
   if (pattern === '/tools/widgets/language') decorateLanguage(btn);
   if (pattern === '/tools/widgets/scheme') decorateScheme(btn);
-  if (pattern === '/tools/widgets/toggle') decorateNavToggle(btn);
+  if (pattern === '/tools/widgets/toggle') decorateSearch(btn);
 }
 
 function decorateMenu(li) {
@@ -150,6 +145,16 @@ function decorateBrandSection(section) {
   section.classList.add('brand-section');
   const brandLink = section.querySelector('a');
   if (!brandLink) return;
+
+  // Replace optimized <picture> logo with direct <img> for reliable SVG rendering
+  const logoPicture = brandLink.querySelector('picture');
+  if (logoPicture) {
+    const img = document.createElement('img');
+    img.src = '/img/intel-logo.svg';
+    img.alt = 'Intel';
+    img.loading = 'eager';
+    logoPicture.replaceWith(img);
+  }
 
   // Find text nodes (not images/pictures) and wrap in brand-text span
   const textNodes = [...brandLink.childNodes].filter(

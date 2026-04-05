@@ -69,6 +69,15 @@ header {
         color: var(--color-intel-dark-navy);
       }
 
+      .action-icon {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+
+        /* Ensure stroke-based SVGs are visible */
+        filter: brightness(0);
+      }
+
       .text {
         display: none;
         font-size: 12px;
@@ -149,6 +158,8 @@ header {
 
         img {
           height: var(--logo-height);
+          width: auto;
+          color: var(--color-intel-dark-navy);
         }
 
         svg {
@@ -172,7 +183,7 @@ header {
 
   .actions-section {
     grid-area: actions;
-    max-height: 64px;
+    max-height: var(--header-height);
     overflow: hidden;
     transition: all 0.2s ease-in-out;
 
@@ -180,6 +191,15 @@ header {
       display: flex;
       justify-content: end;
       align-items: center;
+      height: var(--header-height);
+      gap: 0;
+
+      > ul {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        height: 100%;
+      }
     }
 
     > .block-content {
@@ -188,16 +208,17 @@ header {
 
     .action-wrapper {
       height: var(--header-height);
-      right: -13px;
+      right: 0;
 
       button {
-        width: 44px;
+        width: auto;
+        min-width: 44px;
       }
     }
 
     &.is-open {
-      overflow: scroll;
-      max-height: 100%;
+      overflow: visible;
+      max-height: none;
     }
   }
 
@@ -341,6 +362,7 @@ header {
 
     .brand-section {
       border-bottom: initial;
+      min-width: 70px;
 
       .default-content {
         max-width: initial;
@@ -368,7 +390,7 @@ header {
 
         .main-nav-link {
           padding: 0 8px;
-          line-height: var(--header-height);
+          line-height: calc(var(--header-height) - 3px);
           border-bottom: 3px solid transparent;
           color: #0068b5;
           font-size: 14px;
@@ -396,11 +418,12 @@ header {
       .default-content {
         max-width: initial;
         margin: 0;
+        gap: 4px;
       }
 
       .action-wrapper {
         position: relative;
-        right: -10px;
+        right: 0;
       }
 
       .action-wrapper button .text {
@@ -408,11 +431,6 @@ header {
         width: auto;
         height: auto;
         overflow: visible;
-      }
-
-      /* Hide mobile toggle on desktop */
-      .action-wrapper.toggle {
-        display: none;
       }
 
       .block-content {

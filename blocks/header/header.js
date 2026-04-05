@@ -10,7 +10,8 @@ const HEADER_ACTIONS = [
   '/tools/widgets/toggle',
 ];
 
-const SIGN_IN_URL = 'https://www.intel.com/content/www/us/en/secure/my-intel.html';
+// Default sign-in URL; overridden by the authored href on the Sign In action link
+let signInUrl = '/secure/my-intel.html';
 
 function closeAllMenus() {
   const openMenus = document.body.querySelectorAll('header .is-open');
@@ -56,9 +57,9 @@ function decorateLanguage(btn) {
 }
 
 function decorateScheme(btn) {
-  // Sign In: redirect to sign-in page
+  // Sign In: redirect to sign-in page (URL set from authored content in decorateAction)
   btn.addEventListener('click', () => {
-    window.location.href = SIGN_IN_URL;
+    window.location.href = signInUrl;
   });
 }
 
@@ -76,7 +77,13 @@ async function decorateAction(header, pattern) {
   const icon = link.querySelector('.icon');
   const text = link.textContent;
   const iconName = icon?.classList?.[1]?.replace('icon-', '') || '';
+  const authoredHref = link.getAttribute('href') || '';
   const btn = document.createElement('button');
+
+  // Capture authored URL for sign-in action
+  if (pattern === '/tools/widgets/scheme' && authoredHref) {
+    signInUrl = authoredHref;
+  }
 
   // Use inline <img> for reliable SVG icon rendering
   if (iconName) {
@@ -149,9 +156,12 @@ function decorateBrandSection(section) {
   // Replace optimized <picture> logo with direct <img> for reliable SVG rendering
   const logoPicture = brandLink.querySelector('picture');
   if (logoPicture) {
+    const origImg = logoPicture.querySelector('img');
     const img = document.createElement('img');
-    img.src = '/img/intel-logo.svg';
-    img.alt = 'Intel';
+    // Use authored src from the original img, falling back to local logo
+    const origSrc = origImg?.getAttribute('src') || '';
+    img.src = origSrc.includes('.svg') ? origSrc : '/img/intel-logo.svg';
+    img.alt = origImg?.alt || 'Intel';
     img.loading = 'eager';
     logoPicture.replaceWith(img);
   }

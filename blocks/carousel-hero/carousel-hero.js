@@ -96,8 +96,11 @@ export default function init(el) {
   el.setAttribute('role', 'region');
   el.setAttribute('aria-roledescription', 'Carousel');
 
-  // Set background image (cube-shadow) as CSS custom property
-  const bgUrl = 'https://www.intel.com/content/dam/logos/cube-shadow.png';
+  // Set background image as CSS custom property
+  // Authorable via data-bg attribute or section metadata
+  const bgUrl = el.dataset.bg
+    || el.closest('.section')?.dataset?.bg
+    || '/media/cube-shadow.png';
   el.style.setProperty('--carousel-hero-bg', `url(${bgUrl})`);
 
   const container = document.createElement('div');

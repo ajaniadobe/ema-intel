@@ -428,6 +428,20 @@ img {
   height: auto;
 }
 
+/* Prevent small icon/thumbnail images in default content from stretching to 100%.
+   Targets icon images by URL patterns and standalone images in paragraphs. */
+.default-content img[src*="/icons/"],
+.default-content img[src*="homepage-product"],
+.default-content img[src*="homepage-icon"],
+.default-content img[src*="icon-"],
+.default-content img[src$=".svg"]:not([src*="scene7"], [src*="1920"]),
+.default-content p > a > img:only-child,
+.default-content p > img:only-child {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 80px;
+}
 
 svg {
   width: 20px;

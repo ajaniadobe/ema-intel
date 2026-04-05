@@ -4,7 +4,9 @@ export default function init(el) {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) {
+      const hasPicture = div.querySelector('picture');
+      const hasOnlyImg = div.children.length === 1 && div.querySelector('img');
+      if (hasPicture || hasOnlyImg) {
         div.className = 'cards-quicklinks-card-image';
       } else {
         div.className = 'cards-quicklinks-card-body';
@@ -14,4 +16,13 @@ export default function init(el) {
   });
   el.textContent = '';
   el.append(ul);
+
+  // Fix icon URLs: rewrite external intel.com icon paths to local /icons/ path
+  el.querySelectorAll('img').forEach((img) => {
+    const src = img.getAttribute('src') || img.src || '';
+    const match = src.match(/icons\/([^/?]+\.svg)/);
+    if (match && (src.includes('intel.com') || img.naturalWidth === 0)) {
+      img.src = `/icons/${match[1]}`;
+    }
+  });
 }

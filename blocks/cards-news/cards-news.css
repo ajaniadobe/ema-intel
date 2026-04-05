@@ -9,14 +9,14 @@
 
 .cards-news > ul > li {
   border: none;
-  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   border-radius: 0;
   background-color: var(--color-background);
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .cards-news > ul > li:last-child {
-  border-right: none;
+  border-bottom: none;
 }
 
 .cards-news .cards-news-card-body {
@@ -24,19 +24,19 @@
 }
 
 .cards-news .cards-news-card-body p:first-child {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: normal;
+  letter-spacing: 0.5px;
   color: #667389;
   margin-bottom: 8px;
 }
 
 .cards-news .cards-news-card-body h3 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.1;
-  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 8px;
   color: var(--color-intel-dark-navy);
 }
 
@@ -46,20 +46,34 @@
   color: #667389;
 }
 
-.cards-news .cards-news-card-body a {
+.cards-news .cards-news-card-body p:last-child a {
   color: var(--color-intel-blue);
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
 }
 
-.cards-news .cards-news-card-body a:hover {
+.cards-news .cards-news-card-body p:last-child a::after {
+  content: ' ›';
+}
+
+.cards-news .cards-news-card-body p:last-child a:hover {
   text-decoration: underline;
 }
 
 @media (width >= 600px) {
   .cards-news > ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-news > ul > li {
+    border-bottom: none;
+    border-right: 1px solid #e0e0e0;
+    padding: 0 24px;
+  }
+
+  .cards-news > ul > li:last-child {
+    border-right: none;
   }
 }
 

@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/foundry/systems-foundry.html",
+  "path": "foundry/systems-foundry",
+  "timestamp": "2026-04-05T19:09:57.525Z",
+  "title": "Semiconductor Manufacturing Systems Foundry for the AI Era",
+  "template": "marketing-landing",
+  "blocks": [
+    "cards-product",
+    "cards-product",
+    "columns"
+  ]
+}

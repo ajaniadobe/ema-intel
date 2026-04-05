@@ -71,7 +71,10 @@
         "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html",
         "https://www.intel.com/content/www/us/en/security/overview.html",
         "https://www.intel.com/content/www/us/en/environment/sustainability.html",
-        "https://www.intel.com/content/www/us/en/foundry/overview.html"
+        "https://www.intel.com/content/www/us/en/foundry/overview.html",
+        "https://www.intel.com/content/www/us/en/foundry/process.html",
+        "https://www.intel.com/content/www/us/en/foundry/packaging.html",
+        "https://www.intel.com/content/www/us/en/foundry/systems-foundry.html"
       ],
       "description": "Long-form marketing landing page with sticky in-page anchor navigation, alternating text/image content sections, expandable card grids, resource link cards, and CTAs",
       "blocks": [
@@ -174,7 +177,16 @@
         "https://www.intel.com/content/www/us/en/developer/overview.html",
         "https://www.intel.com/content/www/us/en/ark.html",
         "https://www.intel.com/content/www/us/en/topics/overview.html",
-        "https://www.intel.com/content/www/us/en/partner-alliance/overview.html"
+        "https://www.intel.com/content/www/us/en/partner-alliance/overview.html",
+        "https://www.intel.com/content/www/us/en/developer/tools/overview.html",
+        "https://www.intel.com/content/www/us/en/developer/learn/overview.html",
+        "https://www.intel.com/content/www/us/en/developer/community/overview.html",
+        "https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html",
+        "https://www.intel.com/content/www/us/en/customer-spotlight/overview.html",
+        "https://www.intel.com/content/www/us/en/industries/overview.html",
+        "https://www.intel.com/content/www/us/en/software/software-overview.html",
+        "https://www.intel.com/content/www/us/en/products/details/processors.html",
+        "https://www.intel.com/content/www/us/en/products/systems-devices.html"
       ],
       "description": "Category directory page with heading, inline search, multi-column category link grids, icon card grids, and resource card sections",
       "blocks": [
@@ -226,7 +238,10 @@
         "https://www.intel.com/content/www/us/en/download-center/home.html",
         "https://www.intel.com/content/www/us/en/support/detect.html",
         "https://www.intel.com/content/www/us/en/company-overview/company-overview.html",
-        "https://www.intel.com/content/www/us/en/jobs/life-at-intel.html"
+        "https://www.intel.com/content/www/us/en/jobs/life-at-intel.html",
+        "https://www.intel.com/content/www/us/en/developer/get-help/overview.html",
+        "https://www.intel.com/content/www/us/en/inclusion/inclusion-at-intel.html",
+        "https://www.intel.com/content/www/us/en/partner-alliance/membership/overview.html"
       ],
       "description": "Institutional landing page with breadcrumbs, text-heavy sections, tabbed content, expandable card groups with show-more toggles, and document/report cards",
       "blocks": [

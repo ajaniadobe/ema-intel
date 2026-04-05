@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/developer/get-help/overview.html",
+  "path": "developer/get-help/overview",
+  "timestamp": "2026-04-05T19:10:01.679Z",
+  "title": "Intel® Product Support",
+  "template": "institutional-landing",
+  "blocks": [
+    "cards-news"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/partner-alliance/membership/overview.html",
+  "path": "partner-alliance/membership/overview",
+  "timestamp": "2026-04-05T19:10:12.791Z",
+  "title": "Intel® Partner Alliance Membership Benefits",
+  "template": "institutional-landing",
+  "blocks": [
+    "cards-news",
+    "cards-news"
+  ]
+}

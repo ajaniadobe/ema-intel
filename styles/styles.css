@@ -339,6 +339,16 @@ a {
 .section {
   display: block;
 
+  --top-bottom-spacing: 48px;
+
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  color-scheme: light;
+
+  > * {
+    color: var(--color-dark);
+  }
+
   > .default-content {
     max-width: var(--grid-container-width);
     margin: 0 auto;
@@ -428,8 +438,11 @@ svg {
 
 /* Intel section variants */
 .section.dark {
+  --top-bottom-spacing: 0;
+
   background-color: var(--color-intel-dark-navy);
   color: var(--color-light);
+  color-scheme: dark;
 
   a:not(.btn) {
     color: #5898ff;

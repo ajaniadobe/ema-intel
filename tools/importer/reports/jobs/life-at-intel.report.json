@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/jobs/life-at-intel.html",
+  "path": "jobs/life-at-intel",
+  "timestamp": "2026-04-05T11:50:53.581Z",
+  "title": "Work and Life at Intel",
+  "template": "institutional-landing",
+  "blocks": [
+    "hero",
+    "cards-news"
+  ]
+}

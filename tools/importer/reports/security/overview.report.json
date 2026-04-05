@@ -2,8 +2,18 @@
   "status": "success",
   "url": "https://www.intel.com/content/www/us/en/security/overview.html",
   "path": "security/overview",
-  "timestamp": "2026-04-03T21:00:17.973Z",
+  "timestamp": "2026-04-05T11:50:23.414Z",
   "title": "Security Innovation for Business Networks | Intel®",
-  "template": "category-directory",
-  "blocks": []
+  "template": "marketing-landing",
+  "blocks": [
+    "hero",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "cards-product",
+    "columns"
+  ]
 }

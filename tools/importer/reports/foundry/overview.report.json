@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.intel.com/content/www/us/en/foundry/overview.html",
+  "path": "foundry/overview",
+  "timestamp": "2026-04-05T11:50:33.656Z",
+  "title": "Semiconductor Manufacturing Company for the AI Era",
+  "template": "marketing-landing",
+  "blocks": [
+    "cards-product",
+    "cards-product",
+    "columns",
+    "columns"
+  ]
+}

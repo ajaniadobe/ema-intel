@@ -8,15 +8,16 @@
 }
 
 .cards-product > ul > li {
-  border: 1px solid rgb(255 255 255 / 15%);
-  border-radius: 4px;
-  background-color: rgb(255 255 255 / 5%);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cards-product > ul > li:hover {
-  border-color: rgb(255 255 255 / 30%);
+  border-color: #ccc;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
 }
 
 .cards-product .cards-product-card-image {
@@ -35,12 +36,13 @@
 
 .cards-product .cards-product-card-body h3 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 8px;
+  color: var(--color-intel-dark-navy);
 }
 
 .cards-product .cards-product-card-body h3 a {
-  color: #5898ff;
+  color: var(--color-intel-blue);
   text-decoration: none;
 }
 
@@ -50,12 +52,13 @@
 
 .cards-product .cards-product-card-body p {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0 0 12px;
+  color: #667389;
 }
 
 .cards-product .cards-product-card-body a:not(h3 a) {
-  color: #5898ff;
+  color: var(--color-intel-blue);
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
@@ -65,8 +68,41 @@
   text-decoration: underline;
 }
 
-@media (min-width: 600px) {
+/* Dark section variant */
+.dark .cards-product > ul > li {
+  border-color: rgb(255 255 255 / 15%);
+  background-color: rgb(255 255 255 / 5%);
+}
+
+.dark .cards-product > ul > li:hover {
+  border-color: rgb(255 255 255 / 30%);
+  box-shadow: none;
+}
+
+.dark .cards-product .cards-product-card-body h3 {
+  color: #fff;
+}
+
+.dark .cards-product .cards-product-card-body h3 a {
+  color: #5898ff;
+}
+
+.dark .cards-product .cards-product-card-body p {
+  color: rgb(255 255 255 / 70%);
+}
+
+.dark .cards-product .cards-product-card-body a:not(h3 a) {
+  color: #5898ff;
+}
+
+@media (width >= 600px) {
   .cards-product > ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

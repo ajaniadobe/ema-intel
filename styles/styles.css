@@ -338,9 +338,6 @@ a {
 /* sections */
 .section {
   display: block;
-
-  --top-bottom-spacing: 48px;
-
   background-color: var(--color-light);
   color: var(--color-dark);
   color-scheme: light;

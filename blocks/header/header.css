@@ -158,6 +158,8 @@ header {
 
         img {
           height: var(--logo-height);
+          width: auto;
+          color: var(--color-intel-dark-navy);
         }
 
         svg {
@@ -360,6 +362,7 @@ header {
 
     .brand-section {
       border-bottom: initial;
+      min-width: 70px;
 
       .default-content {
         max-width: initial;

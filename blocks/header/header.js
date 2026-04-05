@@ -146,6 +146,16 @@ function decorateBrandSection(section) {
   const brandLink = section.querySelector('a');
   if (!brandLink) return;
 
+  // Replace optimized <picture> logo with direct <img> for reliable SVG rendering
+  const logoPicture = brandLink.querySelector('picture');
+  if (logoPicture) {
+    const img = document.createElement('img');
+    img.src = '/img/intel-logo.svg';
+    img.alt = 'Intel';
+    img.loading = 'eager';
+    logoPicture.replaceWith(img);
+  }
+
   // Find text nodes (not images/pictures) and wrap in brand-text span
   const textNodes = [...brandLink.childNodes].filter(
     (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim(),

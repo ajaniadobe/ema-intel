@@ -18,6 +18,18 @@ export default function init(el) {
   el.textContent = '';
   el.append(nav);
 
+  // Move anchor-nav out of its section so sticky works across the whole page.
+  // In EDS each section is a direct child of <main>; sticky only works within
+  // the containing block, so we need anchor-nav to be a direct child of <main>.
+  const section = el.closest('.section');
+  const main = document.querySelector('main');
+  if (section && main) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'section anchor-nav-section';
+    wrapper.append(el);
+    section.after(wrapper);
+  }
+
   // Smooth scroll behavior
   nav.addEventListener('click', (e) => {
     const link = e.target.closest('.anchor-nav-link');

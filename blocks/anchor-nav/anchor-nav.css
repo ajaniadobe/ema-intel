@@ -1,17 +1,22 @@
-.anchor-nav {
+.anchor-nav-section {
   position: sticky;
   top: var(--header-height, 64px);
   z-index: 10;
+  padding: 0;
+}
+
+.anchor-nav {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
+  width: 100%;
 }
 
 .anchor-nav-bar {
   display: flex;
+  justify-content: center;
   gap: 0;
   overflow-x: auto;
   scrollbar-width: none;
-  max-width: var(--grid-container-width);
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -38,7 +43,8 @@
 }
 
 /* Dark section variant */
-.dark .anchor-nav {
+.dark .anchor-nav,
+.dark.anchor-nav-section .anchor-nav {
   background-color: var(--color-intel-dark-navy);
   border-bottom-color: rgb(255 255 255 / 15%);
 }

@@ -28,6 +28,18 @@
 
   &.dark {
     color: var(--color-light);
+
+    .hero-foreground {
+      background: transparent;
+    }
+
+    .fg-text {
+      background: rgb(0 40 86 / 85%);
+      border: 1px solid rgb(0 104 181 / 40%);
+      padding: 32px;
+      border-radius: 4px;
+      max-width: 420px;
+    }
   }
 
   &.quiet-background {

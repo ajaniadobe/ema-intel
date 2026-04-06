@@ -28,7 +28,7 @@ header {
 
   a {
     text-decoration: none;
-    color: #0068b5;
+    color: var(--color-intel-blue);
   }
 
   .btn {
@@ -242,7 +242,7 @@ header {
     .main-nav-link {
       display: block;
       line-height: 64px;
-      color: #0068b5;
+      color: var(--color-intel-blue);
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 1px;
@@ -256,7 +256,7 @@ header {
     }
 
     .mega-menu a {
-      color: #0068b5;
+      color: var(--color-intel-blue);
       font-size: 14px;
     }
 
@@ -348,7 +348,7 @@ header {
         }
 
         a {
-          color: #0068b5;
+          color: var(--color-intel-blue);
           font-size: 14px;
           line-height: 2;
         }
@@ -392,19 +392,19 @@ header {
           padding: 0 8px;
           line-height: calc(var(--header-height) - 3px);
           border-bottom: 3px solid transparent;
-          color: #0068b5;
+          color: var(--color-intel-blue);
           font-size: 14px;
           font-weight: 400;
           letter-spacing: 1px;
         }
 
         .main-nav-link:hover {
-          border-bottom-color: #0068b5;
+          border-bottom-color: var(--color-intel-blue);
         }
 
         &.is-open {
           .main-nav-link {
-            border-bottom: 3px solid #0068b5;
+            border-bottom: 3px solid var(--color-intel-blue);
             color: var(--color-intel-dark-navy);
           }
         }

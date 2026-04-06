@@ -154,39 +154,47 @@
   --color-yellow-800: #373100;
   --color-yellow-900: #1e1b00;
 
-  /* Intel named colors */
+  /* Intel named colors — extracted from intel.com */
   --color-light-base: 255 255 255;
   --color-dark-base: 0 15 40;
   --color-light: rgb(255 255 255);
   --color-dark: rgb(0 15 40);
   --color-text: light-dark(var(--color-dark), var(--color-light));
-  --color-link: light-dark(#0046c8, #5898ff);
-  --color-brand: #0046c8;
-  --color-accent: light-dark(#0046c8, #5898ff);
+  --color-link: light-dark(#0068b5, #5898ff);
+  --color-brand: #0071c5;
+  --color-accent: light-dark(#0068b5, #5898ff);
   --color-background: light-dark(var(--color-light), var(--color-dark));
   --color-shaded: light-dark(#eef4fe, #0a1628);
 
-  /* Intel-specific colors */
-  --color-intel-blue: #0046c8;
+  /* Intel-specific colors — exact values from source */
+  --color-intel-blue: #0068b5;
+  --color-intel-blue-hover: #004a86;
+  --color-intel-blue-dark: #0071c5;
+  --color-intel-blue-cta: #0068b5;
   --color-intel-dark-navy: #000f28;
   --color-intel-light-blue-tint: #eef4fe;
+  --color-intel-gray-text: #262626;
+  --color-intel-gray-secondary: #667389;
+  --color-intel-gray-border: #d7d7d7;
   --color-intel-cobalt-1: #001a43;
   --color-intel-cobalt-2: #001530;
   --color-intel-cobalt-3: #000e20;
 
-  /* fonts */
-  --font-family: montserrat, "Trebuchet MS", sans-serif;
+  /* fonts — Intel One / Intel Clear */
+  --font-family: "Trebuchet MS", helvetica, arial, sans-serif;
+  --heading-font-family: "Trebuchet MS", helvetica, arial, sans-serif;
 
-  /* headings — Intel scale */
-  --heading-font-size-xxl: 36px;
-  --heading-font-size-xl: 30px;
+  /* headings — Intel scale (extracted from source) */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 32px;
   --heading-font-size-l: 24px;
   --heading-font-size-m: 22px;
   --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-xs: 16px;
   --heading-line-height: 1.2;
+  --heading-font-weight: 500;
 
-  /* body */
+  /* body — Intel scale */
   --body-font-size-xxxl: 25px;
   --body-font-size-xxl: 22px;
   --body-font-size-xl: 20px;
@@ -194,7 +202,7 @@
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
-  --body-line-height: 1.15;
+  --body-line-height: 1.5;
 
   /* misc */
   --header-height: 64px;
@@ -270,8 +278,8 @@ a {
     border: 2px solid var(--color-intel-blue);
 
     &:hover {
-      background: #003aa5;
-      border-color: #003aa5;
+      background: #004a86;
+      border-color: #004a86;
     }
 
     &.btn-outline {
@@ -290,8 +298,8 @@ a {
     border: 2px solid var(--color-intel-blue);
 
     &:hover {
-      background: #003aa5;
-      border-color: #003aa5;
+      background: #004a86;
+      border-color: #004a86;
     }
 
     &.btn-outline {
@@ -401,8 +409,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: var(--heading-font-weight);
   line-height: var(--heading-line-height);
+  color: var(--color-intel-dark-navy);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }

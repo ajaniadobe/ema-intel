@@ -19,8 +19,8 @@ footer {
     line-height: 1.6;
   }
 
-  /* Section 1: Logo + Company Links + Social Links */
-  .section:first-child {
+  /* Section 1: Logo + Company Links + Social */
+  .section-links {
     .default-content {
       max-width: initial;
       margin: initial;
@@ -32,14 +32,14 @@ footer {
       height: auto;
     }
 
-    /* Company links list */
+    /* Company links — multi-column on desktop */
     ul:first-of-type {
       list-style: none;
       margin: 24px 0 0;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 24px;
+      gap: 8px 32px;
 
       li {
         margin: 0;
@@ -51,7 +51,7 @@ footer {
       }
     }
 
-    /* Social links list */
+    /* Social links */
     ul:last-of-type {
       list-style: none;
       margin: 24px 0 0;
@@ -101,10 +101,17 @@ footer {
     margin-top: 16px;
 
     p {
-      margin: 0;
+      margin: 0 0 8px;
       font-size: 9px;
       line-height: 1.5;
       color: rgb(102 115 137);
+    }
+
+    p:first-child {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-intel-dark-navy);
+      margin-bottom: 8px;
     }
   }
 
@@ -122,15 +129,12 @@ footer {
       padding: 48px 40px;
     }
 
-    .section:first-child {
-      ul:first-of-type {
-        gap: 8px 32px;
-      }
-    }
+    .section-links ul:first-of-type {
+      columns: 3;
+      gap: 32px;
 
-    .section-legal {
-      ul {
-        gap: 8px 24px;
+      li {
+        break-inside: avoid;
       }
     }
   }

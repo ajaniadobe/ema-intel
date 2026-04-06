@@ -17,11 +17,16 @@ export default async function init(el) {
 
     const sections = [...fragment.querySelectorAll('.section')];
 
+    // Last section is copyright/disclaimer
     const copyright = sections.pop();
-    copyright.classList.add('section-copyright');
+    if (copyright) copyright.classList.add('section-copyright');
 
+    // Second-to-last section is legal links
     const legal = sections.pop();
-    legal.classList.add('section-legal');
+    if (legal) legal.classList.add('section-legal');
+
+    // First section contains logo, company links, and social links
+    if (sections[0]) sections[0].classList.add('section-links');
 
     // Replace optimized <picture> logo with direct <img> for reliable SVG rendering
     const logoPicture = fragment.querySelector('.section:first-child picture');

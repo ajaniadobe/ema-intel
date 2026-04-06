@@ -467,9 +467,7 @@ main .default-content img[src*="/icons/"],
 main .default-content img[src*="homepage-product"],
 main .default-content img[src*="homepage-icon"],
 main .default-content img[src*="icon-"],
-main .default-content img[src$=".svg"]:not([src*="scene7"], [src*="1920"]),
-main .default-content p > a > img:only-child,
-main .default-content p > img:only-child {
+main .default-content img[src$=".svg"]:not([src*="scene7"], [src*="1920"]) {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -479,6 +477,25 @@ main .default-content p > img:only-child {
 svg {
   width: 20px;
   height: 20px;
+}
+
+/* Section intro centering — matches Intel.com pattern where h2 + subtitle are centered */
+.section .default-content > h2:first-child {
+  text-align: center;
+}
+
+.section .default-content > h2:first-child + p {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section .default-content > h2:first-child + p + p {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Intel section variants */
@@ -503,18 +520,78 @@ svg {
   }
 }
 
+.section.blue {
+  --top-bottom-spacing: 0;
+
+  background-color: var(--color-intel-blue);
+  color: var(--color-light);
+  color-scheme: dark;
+
+  a:not(.btn) {
+    color: #7ec8ff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-light);
+  }
+}
+
 .section.shaded {
   background-color: var(--color-intel-light-blue-tint);
 }
 
-/* Footer styling */
-footer {
-  border-top: 1px solid #e0e0e0;
-  font-size: 12px;
+/* Link list sections — multi-column layout for h3 + ul groups */
+.section .default-content h3 + ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
 }
 
+.section .default-content h3 + ul li {
+  margin: 0;
+  padding: 6px 0;
+}
+
+.section .default-content h3 + ul a {
+  color: var(--color-intel-blue);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.section .default-content h3 + ul a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 768px) {
+  .section .default-content:has(h3 + ul) {
+    column-count: 3;
+    column-gap: 40px;
+  }
+
+  .section .default-content:has(h3 + ul) > h3 {
+    break-after: avoid;
+    margin-top: 0;
+  }
+
+  .section .default-content:has(h3 + ul) > ul,
+  .section .default-content:has(h3 + ul) > p {
+    break-before: avoid;
+    break-inside: avoid;
+  }
+
+  .section .default-content:has(h3 + ul) > h3:not(:first-child) {
+    margin-top: 24px;
+  }
+}
+
+/* Footer styling */
 footer a {
-  color: #667389;
+  color: #000;
   text-decoration: none;
 }
 

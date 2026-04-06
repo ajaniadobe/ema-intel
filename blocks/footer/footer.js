@@ -28,20 +28,44 @@ export default async function init(el) {
     // First section contains logo, company links, and social links
     if (sections[0]) sections[0].classList.add('section-links');
 
-    // Replace optimized <picture> logo with direct <img> for reliable SVG rendering
-    const logoPicture = fragment.querySelector('.section:first-child picture');
-    if (logoPicture) {
-      const img = logoPicture.querySelector('img');
-      if (img) {
+    // Extract logo from section-links into its own container for flex layout
+    const logoP = fragment.querySelector('.section-links .default-content p:first-child');
+    let logoContainer = null;
+    if (logoP) {
+      const logoPicture = logoP.querySelector('picture');
+      const logoImg = logoPicture?.querySelector('img') || logoP.querySelector('img');
+      if (logoImg) {
         const directImg = document.createElement('img');
-        // Use authored src from the original img, falling back to local logo
-        const origSrc = img.getAttribute('src') || '';
+        const origSrc = logoImg.getAttribute('src') || '';
         directImg.src = origSrc.includes('.svg') ? origSrc : '/img/intel-logo.svg';
-        directImg.alt = img.alt || 'Intel';
+        directImg.alt = logoImg.alt || 'Intel';
         directImg.loading = 'lazy';
-        logoPicture.replaceWith(directImg);
+        directImg.className = 'footer-logo';
+
+        const logoLink = logoP.querySelector('a');
+        logoContainer = document.createElement('div');
+        logoContainer.className = 'footer-logo-container';
+        if (logoLink) {
+          const a = document.createElement('a');
+          a.href = logoLink.href;
+          a.append(directImg);
+          logoContainer.append(a);
+        } else {
+          logoContainer.append(directImg);
+        }
+        logoP.remove();
       }
     }
+
+    // Wrap all sections in a content div
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'footer-main-content';
+    [...fragment.querySelectorAll('.section')].forEach((s) => contentDiv.append(s));
+
+    // Build flex layout: logo left, content right
+    fragment.textContent = '';
+    if (logoContainer) fragment.append(logoContainer);
+    fragment.append(contentDiv);
 
     el.append(fragment);
 

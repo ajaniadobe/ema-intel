@@ -43,6 +43,21 @@
     a:hover {
       text-decoration: underline;
     }
+
+    p:last-child > a:only-child {
+      display: inline-block;
+      background-color: var(--color-intel-blue);
+      color: #fff;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    p:last-child > a:only-child:hover {
+      background-color: #004a86;
+      text-decoration: none;
+    }
   }
 
   &.gap-xs {

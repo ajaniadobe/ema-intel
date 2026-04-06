@@ -5,9 +5,9 @@ export default function init(el) {
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && (div.querySelector('picture') || div.querySelector('img'))) {
-        div.className = 'cards-product-card-image';
+        div.className = 'cards-product-highlight-card-image';
       } else {
-        div.className = 'cards-product-card-body';
+        div.className = 'cards-product-highlight-card-body';
       }
     });
     ul.append(li);

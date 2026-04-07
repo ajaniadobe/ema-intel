@@ -42,6 +42,30 @@
     }
   }
 
+  &.light-box {
+    .hero-foreground {
+      background: transparent;
+    }
+
+    .fg-text {
+      background: rgb(242 242 242 / 95%);
+      color: rgb(38 38 38);
+      padding: 32px 24px 48px;
+      text-align: start;
+      grid-column: 2;
+
+      h1 {
+        color: rgb(38 38 38);
+        margin-bottom: 16px;
+      }
+
+      p,
+      div {
+        color: rgb(38 38 38);
+      }
+    }
+  }
+
   &.quiet-background {
     .hero-background div::after {
       content: '';

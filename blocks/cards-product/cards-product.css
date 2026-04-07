@@ -104,6 +104,37 @@
   background-color: #e0e0e0;
 }
 
+/* Stacked variant — image on top, full width */
+.cards-product.stacked > ul > li {
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cards-product.stacked > ul > li:hover {
+  border-color: #ccc;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.cards-product.stacked .cards-product-card-image {
+  flex: none;
+  max-width: none;
+  padding: 0;
+}
+
+.cards-product.stacked .cards-product-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.cards-product.stacked .cards-product-card-body {
+  padding: 20px 24px 24px;
+}
+
 /* Mobile: stack vertically on small screens */
 @media (width < 600px) {
   .cards-product > ul > li {

@@ -498,6 +498,32 @@ svg {
   margin-right: auto;
 }
 
+/* Global CTA button — standalone link in a paragraph within default content */
+main .section .default-content p > a:only-child {
+  display: inline-block;
+  background-color: var(--color-intel-blue);
+  color: #fff;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+main .section .default-content p > a:only-child:hover {
+  background-color: #004a86;
+}
+
+/* Dark sections: white CTA buttons */
+main .section.dark .default-content p > a:only-child {
+  background-color: #fff;
+  color: var(--color-intel-blue);
+}
+
+main .section.dark .default-content p > a:only-child:hover {
+  background-color: #e0e0e0;
+}
+
 /* Intel section variants */
 .section.dark {
   --top-bottom-spacing: 0;

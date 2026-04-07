@@ -62,6 +62,15 @@ function handleBackground(background, section) {
     section.prepend(pic);
     return;
   }
+  const img = background.content.querySelector('img');
+  if (img && img.src) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'section-background';
+    wrapper.append(img);
+    section.classList.add('has-background');
+    section.prepend(wrapper);
+    return;
+  }
   const color = background.text;
   if (color) {
     section.style.backgroundColor = color.startsWith('color-token')

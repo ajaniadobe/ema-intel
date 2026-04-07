@@ -539,6 +539,22 @@ svg {
   h6 {
     color: var(--color-light);
   }
+
+  /* CTA buttons in blue sections: white bg, blue text */
+  .default-content p > a:only-child {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--color-intel-blue);
+    padding: 10px 24px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-bottom: 8px;
+  }
+
+  .default-content p > a:only-child:hover {
+    background-color: #e0e0e0;
+  }
 }
 
 .section.shaded {

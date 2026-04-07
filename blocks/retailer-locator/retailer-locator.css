@@ -1,5 +1,5 @@
 .retailer-locator {
-  background-color: #000;
+  background-color: #000f8a;
   color: #fff;
   padding: 48px 24px;
   text-align: center;
@@ -12,5 +12,5 @@
 }
 
 .retailer-locator p {
-  color: #ccc;
+  color: rgb(255 255 255 / 80%);
 }

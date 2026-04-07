@@ -243,9 +243,13 @@
 
 @media (width >= 600px) {
   .hero {
+    h1 {
+      font-size: 28px;
+    }
+
     .hero-foreground {
       display: grid;
-      grid-template-columns: 45% 45%;
+      grid-template-columns: 50% 50%;
       justify-content: space-between;
       max-width: var(--grid-container-width);
       margin: 0 auto;
@@ -297,14 +301,22 @@
 
 @media (width >= 900px) {
   .hero {
+    h1 {
+      font-size: 36px;
+    }
+
     .hero-foreground {
-      grid-template-columns: 40% 40%;
+      grid-template-columns: 45% 45%;
     }
   }
 }
 
 @media (width >= 1200px) {
   .hero {
+    h1 {
+      font-size: var(--heading-font-size-xxl);
+    }
+
     .hero-foreground {
       grid-template-columns: 33% 33%;
     }

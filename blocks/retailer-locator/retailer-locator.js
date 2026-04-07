@@ -1,6 +1,4 @@
-export default function init(el) {
-  const heading = el.querySelector('h2, h3');
-  if (!heading) {
-    el.innerHTML = '<h2>Where to Buy</h2><p>Retailer locator coming soon. Visit intel.com/buy for current options.</p>';
-  }
+export default function init(_) {
+  // Retailer locator block — renders authored content (heading, description)
+  // Functional dropdown selectors require integration with Intel's retailer API
 }

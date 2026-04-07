@@ -190,6 +190,57 @@
   }
 }
 
+/* Mobile hero adjustments */
+@media (width < 600px) {
+  .hero {
+    /* Light-box on mobile: stack image above text box */
+    &.light-box {
+      .hero-background {
+        position: relative;
+
+        > div {
+          position: relative;
+        }
+
+        picture {
+          position: relative;
+        }
+
+        img {
+          height: auto;
+          max-height: 200px;
+        }
+      }
+
+      .hero-foreground {
+        min-height: auto;
+        padding: 0;
+      }
+
+      .fg-text {
+        grid-column: auto;
+        max-width: none;
+        padding: 32px 16px 48px;
+        border-radius: 0;
+      }
+    }
+
+    /* Dark variant on mobile: full-width text box, smaller padding */
+    &.dark {
+      .fg-text {
+        max-width: none;
+        border-radius: 0;
+        border: none;
+        padding: 32px 16px;
+      }
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+  }
+}
+
 @media (width >= 600px) {
   .hero {
     .hero-foreground {
